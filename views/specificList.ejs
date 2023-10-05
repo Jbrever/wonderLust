@@ -1,0 +1,18 @@
+<% layout('/layouts/boilerplate') %>
+<body>
+    <ul>
+        <li><%= data.title %></li>
+        <li><%= data.description %></li>
+        <li><%= data.image %></li>
+        <li><%= data.price %></li>
+        <li><%= data.location %></li>
+        <li><%= data.country %></li>
+    </ul>
+    <form action="/listing/<%= data.id %>/edit">
+        <button>edit</button>
+    </form>
+
+    <form method="post" action="/listing/<%= data.id %>/edit/?_method=delete">
+        <button>delete</button>
+    </form>
+</body>
